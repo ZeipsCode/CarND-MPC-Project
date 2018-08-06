@@ -106,8 +106,8 @@ int main() {
           Eigen::VectorXd waypoints_x(ptsx.size());
           Eigen::VectorXd waypoints_y(ptsy.size());
 
-          double Lf = 2.68;
-          double latency = 100.00 / 1000.00;
+          double latency = 0.1;
+          double Lf = 2.68;          
           double nv = v + throttle_value * latency;
 
           double npsi = psi + nv / Lf * -steer_value * latency;
