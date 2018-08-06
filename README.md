@@ -3,7 +3,8 @@ Self-Driving Car Engineer Nanodegree Program
 
 ## Model
 
-The kinematic model includes the vehicle's x and y coordinates, orientation angle (psi), and velocity, as well as the cross-track error and psi error (epsi). The Controller outputs are acceleration and steering angle. The model combines the state and actuations from the previous timestep to calculate the state for the current timestep based on the equations below:
+The kinematic model includes the vehicle's x and y coordinates, orientation angle (psi), and velocity, as well as the cross-track error and psi error. The Controller outputs are acceleration and steering angle. Basically this kinematic model equates to a bicycle model.
+The model combines the state and actuations from the previous timestep to calculate the state for the current timestep based on the equations below:
 
 ![model](./img/modelequ.png)
 
