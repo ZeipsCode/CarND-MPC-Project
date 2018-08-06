@@ -31,6 +31,7 @@ The waypoints are preprocessed by transforming them to the vehicle's coordinate 
 ## Model Predictive Control with Latency
 
 I chose the two parameters N and dt which describe the timestep length and the duration as 10 and 0.1. This means that the time horizon of the controller is 10 steps. Generally a larger N should lead to a smoother actuation of the controller, but also lead to a larger equation to be solved, thus increasing computation time.
+The latency problem can be overcome by predicting the future position of the vehicle by using the current speed.
 
 
 
