@@ -23,9 +23,7 @@ The waypoints are preprocessed by transforming them to the vehicle's coordinate 
 
 ## Model Predictive Control with Latency
 
-The approach to dealing with latency was twofold (not counting simply limiting the speed): the original kinematic equations depend upon the actuations from the previous timestep, but with a delay of 100ms (which happens to be the timestep interval) the actuations are applied another timestep later, so the equations have been altered to account for this. Also, in addition to the cost functions suggested in the lessons (punishing CTE, epsi, difference between velocity and a reference velocity, delta, acceleration, change in delta, and change in acceleration) an additional cost penalizing the combination of velocity and delta (MPC.cpp line 63) was included and results in much more controlled cornering.
-
-
+I chose the two parameters N and dt which describe the timestep length and the duration as 10 and 0.1. This means that the time horizon of the controller is 10 steps. Generally a larger N should lead to a smoother actuation of the controller, but also lead to a larger equation to be solved, thus increasing computation time.
 
 
 
